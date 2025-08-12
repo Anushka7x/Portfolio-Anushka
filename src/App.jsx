@@ -3,7 +3,7 @@ import portraitImg from "./assets/avatar.jpg";
 import  projectgif  from "./assets/Crispe - Chris Phillips-c4a26e89.gif";
 import heroImg from "./assets/avtar2.jpg"
 // your illustrated photo
-const resumeUrl = new URL("./assets/Anushka Dubey React 2 years.pdf", import.meta.url).href;
+const resumeUrl = new URL("./assets/Anushka Dubey Resume 2 years.pdf", import.meta.url).href;
 
 const Tag = ({ children }) => <span className="tag">{children}</span>;
 const Bullet = ({ children }) => (
@@ -99,7 +99,7 @@ function Intro() {
 <a
   className="button ghost"
   href={resumeUrl}
-  download="Anushka Dubey React 2 years.pdf"
+  download="Anushka Dubey Resume 2 years.pdf"
   rel="noreferrer"
 >
   Download Résumé
