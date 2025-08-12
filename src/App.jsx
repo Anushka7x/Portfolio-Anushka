@@ -96,7 +96,6 @@ function Intro() {
 
 
         <div className="intro-cta">
-          <a className="button" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
 <a
   className="button ghost"
   href={resumeUrl}
