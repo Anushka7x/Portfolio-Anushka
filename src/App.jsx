@@ -2,7 +2,8 @@ import React from "react";
 import portraitImg from "./assets/avatar.jpg";
 import projectgif from "./assets/Crispe - Chris Phillips-c4a26e89.gif";
 import heroImg from "./assets/avtar2.jpg";
-// résumé file (ensure the file exists at this path in your build/public)
+
+// résumé file — ensure correct path
 const resumeUrl = new URL("./assets/Anushka_dubey_AD.pdf", import.meta.url).href;
 
 const Tag = ({ children }) => <span className="tag">{children}</span>;
@@ -74,7 +75,7 @@ function Intro() {
 
         <p className="intro-copy">
           Frontend Developer with 2+ years of experience building responsive, scalable web applications using
-          <strong> React.js</strong>, <strong>TypeScript</strong>, and modern front-end tooling. I specialize in
+          <strong> React.js</strong>, <strong>Next.js</strong>, and modern front-end tooling. I specialize in
           component-driven UI development, REST API integration, and performance optimization (lazy loading,
           code-splitting, memoization). I have delivered client-facing projects in Agile teams and collaborated
           closely with designers and backend engineers to ship production-ready features. I also use AI-assisted
@@ -118,6 +119,7 @@ function Intro() {
   );
 }
 
+/* ---------------- DIVIDER ---------------- */
 function Divider() {
   return (
     <div className="divider" aria-hidden>
@@ -126,8 +128,7 @@ function Divider() {
   );
 }
 
-/* --------------- SECTIONS --------------- */
-/* ---------------- TECHNICAL SKILLS ---------------- */
+/* ---------------- SKILLS ---------------- */
 function Skills() {
   return (
     <article className="panel skills-panel">
@@ -162,7 +163,7 @@ function Skills() {
             <Tag>Redux Toolkit</Tag>
             <Tag>Context API</Tag>
             <Tag>RTK Query</Tag>
-            <Tag>Fetch / Axios</Tag>
+            <Tag>Axios / Fetch</Tag>
           </div>
         </div>
 
@@ -191,8 +192,10 @@ function Skills() {
           <h4>AI & Productivity</h4>
           <div className="tags">
             <Tag>GitHub Copilot</Tag>
-            <Tag>Figma AI plugins</Tag>
-            <Tag>OpenAI API (experimental)</Tag>
+            <Tag>ChatGPT</Tag>
+            <Tag>OpenAI API</Tag>
+            <Tag>Codeium</Tag>
+            <Tag>Cursor</Tag>
           </div>
         </div>
       </div>
@@ -204,59 +207,71 @@ function Skills() {
 function Projects() {
   const projects = [
     {
-      title: "Web UI Component Library",
-      period: "2024—2025",
-      role: "Frontend",
-      img: "/assets/component-library.gif",
-      alt: "Component library preview",
-      brief:
-        "Reusable layout, button and form components built with React & SCSS to maintain design consistency across internal projects.",
-      stack: ["React", "SCSS"],
-      link: null
-    },
-    {
-      title: "E-commerce Web Frontend",
+      title: "Nursery E-commerce UI",
       period: "2024",
-      role: "React / Next.js",
-      img: "/assets/ecommerce.gif",
-      alt: "E-commerce frontend preview",
+      role: "Frontend Developer — Expleo (Personal Project)",
+      img: "/assets/Nursery-8cb9c0b0.gif",
+      alt: "Nursery E-commerce UI preview",
       brief:
-        "Next.js app with dynamic product routing, cart logic, sorting and API integration; responsive UI and reusable components.",
-      stack: ["Next.js", "React", "CSS"],
-      link: null
+        "E-commerce prototype for a plant nursery featuring product cards, filter sorting, and category navigation. Focused on responsive layout and modular CSS.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      link: "https://anushka7x.github.io/Nursery/"
     },
     {
-      title: "AI Form Helper (Internal Hackathon)",
+      title: "Street Animal Care",
       period: "2024",
-      role: "Frontend",
-      img: "/assets/ai-form-helper.gif",
-      alt: "AI Form Helper preview",
+      role: "Frontend Developer — Expleo (Personal Project)",
+      img: "/assets/petcare-d5eb60b1.gif",
+      alt: "Street Animal Care website preview",
       brief:
-        "AI utility using React + OpenAI API to auto-fill form fields and generate validation hints for faster demos and testing.",
-      stack: ["React", "OpenAI API"],
-      link: null
+        "Donation/help portal for stray animals with intuitive CTAs, volunteer form, and real-time donation tracker using vanilla JS.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      link: "https://anushka7x.github.io/pet-care/"
     },
     {
-      title: "AI Code Review Assistant (Mini Project)",
+      title: "Travel Explorer Site",
       period: "2024",
-      role: "Frontend",
-      img: "/assets/ai-code-review.gif",
-      alt: "AI code review assistant preview",
+      role: "Frontend Developer — Expleo (Personal Project)",
+      img: "/assets/travel-8cbeb3a1.gif",
+      alt: "Travel Explorer site preview",
       brief:
-        "Browser-based tool using OpenAI API + CodeMirror to analyze JS/React code and provide refactoring suggestions.",
-      stack: ["JavaScript", "OpenAI API"],
+        "Responsive travel agency landing page with dynamic destination sections, search filters, and call-to-action elements.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      link: "https://anushka7x.github.io/Travel/"
+    },
+    {
+      title: "Bhalekar Consulting (Official)",
+      period: "2025",
+      role: "Software Developer (Contract) — Bhalekar.ai",
+      img: "/assets/bhalekar-e3946baa.gif",
+      alt: "Bhalekar Consulting website preview",
+      brief:
+        "Corporate consulting website built during contract tenure. Implemented responsive pages and optimized React components using Bootstrap, JS, and CSS.",
+      stack: ["Bootstrap", "JavaScript", "CSS3"],
+      link: "https://bhalekar.ai/"
+    },
+    {
+      title: "Nimbus Marine (Singapore)",
+      period: "2025",
+      role: "Frontend Developer — Bhalekar.ai",
+      img: "/assets/Nimbus-bff71fe5.gif",
+      alt: "Nimbus Marine site preview",
+      brief:
+        "Developed hiring and service platform for a Singapore-based marine firm. Delivered modular UI, image optimization, and performance tuning.",
+      stack: ["Bootstrap", "JavaScript", "CSS3"],
       link: null
     },
     {
-      title: "Personal Portfolio Website",
-      period: "2023",
-      role: "Frontend",
-      img: "/assets/portfolio-preview.gif",
-      alt: "Portfolio preview",
+      title: "AusExport Portal (Ongoing)",
+      period: "2025",
+      role: "React / Next.js Developer — Bhalekar.ai",
+      img: "/assets/Crispe - Chris Phillips-c4a26e89.gif",
+      alt: "AusExport portal preview",
       brief:
-        "Personal portfolio built with React to showcase frontend projects, responsive layouts and component-driven structure.",
-      stack: ["React", "CSS3"],
-      link: "https://anushka7x.github.io/Portfolio-Anushka/"
+        "Business export management system using React, Next.js, and Tailwind for an Australian client. Currently building dashboard components and SSR architecture.",
+      stack: ["Next.js", "React", "Tailwind"],
+      link: null,
+      badge: "Currently Working"
     }
   ];
 
@@ -268,7 +283,8 @@ function Projects() {
         {projects.map((p) => (
           <article className="project-card" key={p.title}>
             <div className="proj-media">
-              <img src={projectgif} alt={p.alt} loading="lazy" />
+              <img src={p.img || projectgif} alt={p.alt} loading="lazy" />
+              {p.badge && <span className="badge">{p.badge}</span>}
             </div>
 
             <header className="proj-header">
@@ -300,7 +316,6 @@ function Projects() {
   );
 }
 
-
 /* ---------------- EXPERIENCE ---------------- */
 function Experience() {
   return (
@@ -311,14 +326,13 @@ function Experience() {
           <li>
             <div className="xp-year">May 2025 — Sept 2025</div>
             <div className="xp-body">
-              <div className="xp-role">Software Developer — Frontend (Contract) — Bhalekar.ai</div>
+              <div className="xp-role">Software Developer — Bhalekar.ai (Contract)</div>
               <div className="xp-meta">React.js · Next.js · TypeScript · Redux Toolkit · Tailwind CSS</div>
               <ul className="xp-bullets">
                 <Bullet>Developed reusable components and dashboard UIs using React and TypeScript.</Bullet>
                 <Bullet>Integrated REST APIs with async handling, error boundaries, and retry logic.</Bullet>
-                <Bullet>Improved UI performance by ~35% using lazy loading, dynamic imports, and memoization.</Bullet>
-                <Bullet>Converted Figma designs to scalable React interfaces for consulting, marine and export clients.</Bullet>
-                <Bullet>Used GitHub Copilot to optimize repetitive UI logic and speed development.</Bullet>
+                <Bullet>Improved UI performance by ~35% through lazy loading, memoization, and optimized images.</Bullet>
+                <Bullet>Collaborated with design and product team to deliver client-facing projects (Nimbus Marine, AusExport).</Bullet>
               </ul>
             </div>
           </li>
@@ -326,13 +340,13 @@ function Experience() {
           <li>
             <div className="xp-year">Aug 2023 — May 2025</div>
             <div className="xp-body">
-              <div className="xp-role">Software Engineer — Frontend — Expleo Group</div>
-              <div className="xp-meta">React · JavaScript · Redux Toolkit · REST · Bootstrap</div>
+              <div className="xp-role">Software Engineer — Expleo Group</div>
+              <div className="xp-meta">React · Redux Toolkit · REST · Jenkins · Bootstrap</div>
               <ul className="xp-bullets">
-                <Bullet>Built frontend modules for enterprise dashboards and internal tools.</Bullet>
-                <Bullet>Implemented pagination, table rendering, dropdown filtering, and reusable components.</Bullet>
-                <Bullet>Improved state management and reduced UI bugs through better validation and structure.</Bullet>
-                <Bullet>Collaborated with product, QA and backend teams to deliver sprint-based features.</Bullet>
+                <Bullet>Built React modules and integrated REST APIs for internal dashboards and client systems.</Bullet>
+                <Bullet>Enhanced UI performance and reduced re-renders with memoization and lazy loading.</Bullet>
+                <Bullet>Automated CI/CD with Jenkins and maintained version control using Git.</Bullet>
+                <Bullet>Collaborated with cross-functional teams in Agile sprints for delivery and QA sign-off.</Bullet>
               </ul>
             </div>
           </li>
@@ -340,11 +354,11 @@ function Experience() {
           <li>
             <div className="xp-year">2023</div>
             <div className="xp-body">
-              <div className="xp-role">Intern</div>
+              <div className="xp-role">Frontend Intern</div>
               <div className="xp-meta">Bootstrap · PHP · HTML · CSS · JavaScript</div>
               <ul className="xp-bullets">
-                <Bullet>Delivered landing pages and dashboards for small businesses.</Bullet>
-                <Bullet>Owned design handoff to deployment on Netlify/Vercel.</Bullet>
+                <Bullet>Delivered landing pages and dashboards for small business clients.</Bullet>
+                <Bullet>Handled complete cycle: design → development → deployment on Netlify/Vercel.</Bullet>
               </ul>
             </div>
           </li>
@@ -354,6 +368,7 @@ function Experience() {
   );
 }
 
+/* ---------------- FOOTER ---------------- */
 function Footer() {
   return (
     <footer className="footer" role="contentinfo">
