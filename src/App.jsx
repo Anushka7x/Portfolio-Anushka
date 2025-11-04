@@ -1,10 +1,14 @@
+// ✅ FULL UPDATED App.jsx – FINAL VERSION
+
 import React from "react";
 import portraitImg from "./assets/avatar.jpg";
-import projectgif from "./assets/Crispe - Chris Phillips-c4a26e89.gif";
 import heroImg from "./assets/avtar2.jpg";
-// résumé file (ensure the file exists at this path in your build/public)
-const resumeUrl = new URL("./assets/Anushka_dubey_AD.pdf", import.meta.url).href;
+import projectgif from "./assets/Crispe - Chris Phillips-c4a26e89.gif";
 
+// Resume file
+const resumeUrl = new URL("./assets/Anushka Dubey Resume 2 years.pdf", import.meta.url).href;
+
+// Reusable Components
 const Tag = ({ children }) => <span className="tag">{children}</span>;
 const Bullet = ({ children }) => (
   <li className="bullet">
@@ -48,10 +52,11 @@ function Hero() {
         </div>
 
         <div className="tinted-block right-card">
-          <img src={heroImg} alt="" className="tinted-img" aria-hidden="true" />
+          <img src={heroImg} alt="Hero" className="tinted-img" aria-hidden="true" />
           <div className="tinted-caption caption-desktop-only">
-            <strong>Frontend Developer — React, Next.js, TypeScript</strong><br />
-            <span>Component-driven UIs • SSR • performance optimization • AI-assisted workflows</span>
+            <strong>Building fast, scalable UIs using React & Next.js.</strong>
+            <br />
+            <span>SSR • Performance • Reusable Components • Core Web Vitals 95+</span>
           </div>
         </div>
 
@@ -73,21 +78,15 @@ function Intro() {
         </h2>
 
         <p className="intro-copy">
-          Frontend Developer with 2+ years of experience building responsive, scalable web applications using
-          <strong> React.js</strong>, <strong>TypeScript</strong>, and modern front-end tooling. I specialize in
-          component-driven UI development, REST API integration, and performance optimization (lazy loading,
-          code-splitting, memoization). I have delivered client-facing projects in Agile teams and collaborated
-          closely with designers and backend engineers to ship production-ready features. I also use AI-assisted
-          development tools such as GitHub Copilot to speed up repetitive tasks and maintain clean code delivery.
+          I’m a Frontend Developer with 2+ years of experience building responsive, scalable web applications using
+          <strong> React.js</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>Redux Toolkit</strong>.
+          I focus on component-driven development, API integration, and UI performance optimization through techniques
+          like lazy loading, SSR, and modular architecture. I enjoy turning Figma designs into production-ready UIs and
+          have hands-on experience using AI tools (GitHub Copilot, ChatGPT) to speed up development.
         </p>
 
         <div className="intro-cta">
-          <a
-            className="button ghost"
-            href={resumeUrl}
-            download="Anushka_dubey_AD.pdf"
-            rel="noreferrer"
-          >
+          <a className="button ghost" href={resumeUrl} download="Anushka_Dubey_Resume.pdf">
             Download Résumé
           </a>
         </div>
@@ -108,8 +107,6 @@ function Intro() {
               <li>Pune, Maharashtra</li>
               <li><a href="mailto:anushkadubey202@gmail.com">anushkadubey202@gmail.com</a></li>
               <li><a href="tel:+917999172774">+91 7999172774</a></li>
-              <li><a href="https://anushka7x.github.io/Portfolio-Anushka/" target="_blank" rel="noreferrer">Portfolio</a></li>
-              <li><a href="https://www.linkedin.com/in/anushka-dubey-19a80a226/" target="_blank" rel="noreferrer">LinkedIn</a></li>
             </ul>
           </div>
         </div>
@@ -126,74 +123,60 @@ function Divider() {
   );
 }
 
-/* --------------- SECTIONS --------------- */
-/* ---------------- TECHNICAL SKILLS ---------------- */
+/* ---------------- SKILLS ---------------- */
 function Skills() {
   return (
     <article className="panel skills-panel">
-      <h3 className="panel-title">Technical skills</h3>
-
+      <h3 className="panel-title">Technical Skills</h3>
       <div className="skills">
         <div>
-          <h4>Frontend</h4>
+          <h4>Languages</h4>
           <div className="tags">
-            <Tag>React.js</Tag>
-            <Tag>Next.js</Tag>
-            <Tag>TypeScript</Tag>
             <Tag>JavaScript (ES6+)</Tag>
+            <Tag>TypeScript</Tag>
             <Tag>HTML5</Tag>
-            <Tag>CSS3 / SCSS</Tag>
+            <Tag>CSS3</Tag>
           </div>
         </div>
 
         <div>
-          <h4>Styling & UI</h4>
+          <h4>Frameworks & Libraries</h4>
           <div className="tags">
-            <Tag>Tailwind CSS</Tag>
-            <Tag>Bootstrap</Tag>
-            <Tag>Responsive Layouts</Tag>
-            <Tag>Design Systems</Tag>
-          </div>
-        </div>
-
-        <div>
-          <h4>State & Data</h4>
-          <div className="tags">
+            <Tag>React</Tag>
+            <Tag>Next.js</Tag>
             <Tag>Redux Toolkit</Tag>
-            <Tag>Context API</Tag>
-            <Tag>RTK Query</Tag>
-            <Tag>Fetch / Axios</Tag>
+            <Tag>Bootstrap</Tag>
+            <Tag>Tailwind CSS</Tag>
           </div>
         </div>
 
         <div>
-          <h4>Performance & Architecture</h4>
+          <h4>Tools</h4>
           <div className="tags">
-            <Tag>SSR</Tag>
-            <Tag>Code Splitting</Tag>
-            <Tag>Lazy Loading</Tag>
-            <Tag>Memoization</Tag>
-          </div>
-        </div>
-
-        <div>
-          <h4>Tools & Other</h4>
-          <div className="tags">
-            <Tag>Git / GitHub</Tag>
+            <Tag>Git</Tag>
+            <Tag>GitHub</Tag>
             <Tag>Jira</Tag>
-            <Tag>Postman</Tag>
             <Tag>Jenkins</Tag>
-            <Tag>VS Code</Tag>
+            <Tag>Postman</Tag>
           </div>
         </div>
 
         <div>
-          <h4>AI & Productivity</h4>
+          <h4>AI Tools</h4>
           <div className="tags">
             <Tag>GitHub Copilot</Tag>
-            <Tag>Figma AI plugins</Tag>
-            <Tag>OpenAI API (experimental)</Tag>
+            <Tag>ChatGPT</Tag>
+            <Tag>Codeium</Tag>
+            <Tag>Cursor</Tag>
+            <Tag>OpenAI API</Tag>
           </div>
+        </div>
+
+        <div className="tags wide">
+          <Tag>SSR</Tag>
+          <Tag>Lazy Loading</Tag>
+          <Tag>Code Splitting</Tag>
+          <Tag>Secure Coding</Tag>
         </div>
       </div>
     </article>
@@ -203,94 +186,129 @@ function Skills() {
 /* ---------------- PROJECTS ---------------- */
 function Projects() {
   const projects = [
+    // ✅ Contract Projects – Bhalekar.ai
+    {
+      title: "AusExport Portal",
+      period: "2025",
+      role: "Frontend (Contract · Bhalekar.ai)",
+      img: projectgif,
+      alt: "AusExport Portal preview",
+      brief: "Built a B2B export management platform using React, Next.js & Tailwind. Implemented dashboards, API integrations, and SSR with reusable components.",
+      stack: ["Next.js", "React", "Tailwind"],
+      link: null
+    },
+    {
+      title: "Nimbus Marine Platform",
+      period: "2025",
+      role: "Frontend (Contract · Bhalekar.ai)",
+      img: "/assets/Nimbus-bff71fe5.gif",
+      alt: "Nimbus Marine hiring platform preview",
+      brief: "Developed marine services & hiring platform using React & Bootstrap. Implemented modular UI, improved load performance and form handling.",
+      stack: ["React", "Bootstrap", "CSS3"],
+      link: null
+    },
+
+    // ✅ Expleo / Internal
     {
       title: "Web UI Component Library",
-      period: "2024—2025",
-      role: "Frontend",
-      img: "/assets/component-library.gif",
-      alt: "Component library preview",
-      brief:
-        "Reusable layout, button and form components built with React & SCSS to maintain design consistency across internal projects.",
+      period: "2024",
+      role: "Frontend (Expleo)",
+      img: projectgif,
+      alt: "Web UI Component Library",
+      brief: "Built reusable buttons, forms, and layout components using React & SCSS to standardize UI across multiple Expleo projects.",
       stack: ["React", "SCSS"],
       link: null
     },
     {
-      title: "E-commerce Web Frontend",
+      title: "AI Form Helper",
       period: "2024",
-      role: "React / Next.js",
-      img: "/assets/ecommerce.gif",
-      alt: "E-commerce frontend preview",
-      brief:
-        "Next.js app with dynamic product routing, cart logic, sorting and API integration; responsive UI and reusable components.",
-      stack: ["Next.js", "React", "CSS"],
-      link: null
-    },
-    {
-      title: "AI Form Helper (Internal Hackathon)",
-      period: "2024",
-      role: "Frontend",
-      img: "/assets/ai-form-helper.gif",
-      alt: "AI Form Helper preview",
-      brief:
-        "AI utility using React + OpenAI API to auto-fill form fields and generate validation hints for faster demos and testing.",
+      role: "Internal Hackathon (Expleo)",
+      img: projectgif,
+      alt: "AI Form Helper demo",
+      brief: "React + OpenAI tool that auto-fills form data and generates validation hints to speed up QA and internal testing.",
       stack: ["React", "OpenAI API"],
       link: null
     },
     {
-      title: "AI Code Review Assistant (Mini Project)",
+      title: "AI Code Review Assistant",
       period: "2024",
-      role: "Frontend",
-      img: "/assets/ai-code-review.gif",
-      alt: "AI code review assistant preview",
-      brief:
-        "Browser-based tool using OpenAI API + CodeMirror to analyze JS/React code and provide refactoring suggestions.",
+      role: "Personal / Expleo Mini Project",
+      img: projectgif,
+      alt: "AI Code Review Assistant preview",
+      brief: "Browser-based code review assistant using OpenAI + CodeMirror to analyze JS/React code and suggest improvements.",
       stack: ["JavaScript", "OpenAI API"],
       link: null
     },
+
+    // ✅ Personal Projects
     {
-      title: "Personal Portfolio Website",
+      title: "Portfolio Website",
       period: "2023",
-      role: "Frontend",
-      img: "/assets/portfolio-preview.gif",
+      role: "Personal Project",
+      img: "/assets/portfolio.gif",
       alt: "Portfolio preview",
-      brief:
-        "Personal portfolio built with React to showcase frontend projects, responsive layouts and component-driven structure.",
+      brief: "Personal portfolio built with React.js & CSS3 to showcase frontend projects and responsive layouts.",
       stack: ["React", "CSS3"],
       link: "https://anushka7x.github.io/Portfolio-Anushka/"
+    },
+    {
+      title: "Nursery E-commerce UI",
+      period: "2024",
+      role: "Personal Project",
+      img: "/assets/Nursery-8cb9c0b0.gif",
+      alt: "Nursery E-commerce UI",
+      brief: "Plant nursery landing with product grids, filters, and minimal cart UI using HTML/CSS/JS.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      link: "https://anushka7x.github.io/Nursery/"
+    },
+    {
+      title: "Travel Explorer",
+      period: "2024",
+      role: "Personal Project",
+      img: "/assets/travel-8cbeb3a1.gif",
+      alt: "Travel website preview",
+      brief: "Responsive travel agency site with destination cards, filtering and scroll animations.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      link: "https://anushka7x.github.io/Travel/"
+    },
+    {
+      title: "Street Animal Care",
+      period: "2024",
+      role: "Personal Project",
+      img: "/assets/petcare-d5eb60b1.gif",
+      alt: "Street Animal Care preview",
+      brief: "Donation portal for stray animals with contact form, call-to-action buttons, and clean UI.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      link: "https://anushka7x.github.io/pet-care/"
     }
   ];
 
   return (
     <article className="panel projects" id="projects">
       <h3 className="panel-title">Projects</h3>
-
       <div className="project-grid">
         {projects.map((p) => (
           <article className="project-card" key={p.title}>
             <div className="proj-media">
-              <img src={projectgif} alt={p.alt} loading="lazy" />
+              <img src={p.img} alt={p.alt} loading="lazy" />
             </div>
-
             <header className="proj-header">
               <h4 className="proj-title">{p.title}</h4>
               <div className="proj-meta">{p.role} · {p.period}</div>
             </header>
-
             <p className="proj-brief">{p.brief}</p>
-
             <div className="tags">
-              {p.stack.map((t) => <span className="tag" key={t}>{t}</span>)}
+              {p.stack.map((t) => (
+                <span className="tag" key={t}>{t}</span>
+              ))}
             </div>
-
             <div className="proj-links">
               {p.link ? (
                 <a className="link-btn live-btn" href={p.link} target="_blank" rel="noreferrer">
                   View Project
                 </a>
               ) : (
-                <span className="link-btn live-btn disabled" aria-disabled="true" title="Coming soon">
-                  View Project
-                </span>
+                <span className="link-btn live-btn disabled" aria-disabled="true">No Live Link</span>
               )}
             </div>
           </article>
@@ -299,7 +317,6 @@ function Projects() {
     </article>
   );
 }
-
 
 /* ---------------- EXPERIENCE ---------------- */
 function Experience() {
@@ -311,14 +328,13 @@ function Experience() {
           <li>
             <div className="xp-year">May 2025 — Sept 2025</div>
             <div className="xp-body">
-              <div className="xp-role">Software Developer — Frontend (Contract) — Bhalekar.ai</div>
-              <div className="xp-meta">React.js · Next.js · TypeScript · Redux Toolkit · Tailwind CSS</div>
+              <div className="xp-role">Software Developer (Contract) — Bhalekar.ai</div>
+              <div className="xp-meta">React · Next.js · Redux Toolkit · Tailwind · API Integration</div>
               <ul className="xp-bullets">
-                <Bullet>Developed reusable components and dashboard UIs using React and TypeScript.</Bullet>
-                <Bullet>Integrated REST APIs with async handling, error boundaries, and retry logic.</Bullet>
-                <Bullet>Improved UI performance by ~35% using lazy loading, dynamic imports, and memoization.</Bullet>
-                <Bullet>Converted Figma designs to scalable React interfaces for consulting, marine and export clients.</Bullet>
-                <Bullet>Used GitHub Copilot to optimize repetitive UI logic and speed development.</Bullet>
+                <Bullet>Developed AusExport Portal using Next.js and Tailwind; built dashboards, authentication, and export workflows.</Bullet>
+                <Bullet>Built Nimbus Marine service & hiring platform with React and Bootstrap; improved UI load time by 30% using image optimization and lazy loading.</Bullet>
+                <Bullet>Converted Figma designs into scalable React components with reusable UI architecture.</Bullet>
+                <Bullet>Enhanced performance using memoization, dynamic imports, and proper state management.</Bullet>
               </ul>
             </div>
           </li>
@@ -326,13 +342,13 @@ function Experience() {
           <li>
             <div className="xp-year">Aug 2023 — May 2025</div>
             <div className="xp-body">
-              <div className="xp-role">Software Engineer — Frontend — Expleo Group</div>
-              <div className="xp-meta">React · JavaScript · Redux Toolkit · REST · Bootstrap</div>
+              <div className="xp-role">Software Engineer — Expleo Group</div>
+              <div className="xp-meta">React · Redux Toolkit · REST APIs · Bootstrap</div>
               <ul className="xp-bullets">
-                <Bullet>Built frontend modules for enterprise dashboards and internal tools.</Bullet>
-                <Bullet>Implemented pagination, table rendering, dropdown filtering, and reusable components.</Bullet>
-                <Bullet>Improved state management and reduced UI bugs through better validation and structure.</Bullet>
-                <Bullet>Collaborated with product, QA and backend teams to deliver sprint-based features.</Bullet>
+                <Bullet>Developed internal dashboards and reusable components using React, Redux Toolkit, and Bootstrap.</Bullet>
+                <Bullet>Built Web UI Component Library to standardize UI development and speed up future feature delivery.</Bullet>
+                <Bullet>Created AI Form Helper and AI Code Review Assistant using OpenAI API for internal productivity.</Bullet>
+                <Bullet>Improved UI responsiveness and performance across legacy modules with code refactoring and lazy-loading strategies.</Bullet>
               </ul>
             </div>
           </li>
@@ -340,11 +356,11 @@ function Experience() {
           <li>
             <div className="xp-year">2023</div>
             <div className="xp-body">
-              <div className="xp-role">Intern</div>
+              <div className="xp-role">Frontend Intern</div>
               <div className="xp-meta">Bootstrap · PHP · HTML · CSS · JavaScript</div>
               <ul className="xp-bullets">
-                <Bullet>Delivered landing pages and dashboards for small businesses.</Bullet>
-                <Bullet>Owned design handoff to deployment on Netlify/Vercel.</Bullet>
+                <Bullet>Delivered responsive websites and dashboards for small businesses.</Bullet>
+                <Bullet>Handled end-to-end — UI design, frontend development, and deployment to Netlify/Vercel.</Bullet>
               </ul>
             </div>
           </li>
@@ -354,6 +370,7 @@ function Experience() {
   );
 }
 
+/* ---------------- FOOTER ---------------- */
 function Footer() {
   return (
     <footer className="footer" role="contentinfo">
